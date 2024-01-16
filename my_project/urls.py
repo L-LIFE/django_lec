@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-#from mysite import views
+
+# from mysite import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("mysite/", include('mysite.urls')), #views.index),
-    path('',include('pages.urls')), #페이지 사용하기 위한 url 매핑
+    path("mysite/", include('mysite.urls')),  # views.index),
+    path('', include('pages.urls')),  # 페이지 사용하기 위한 url 매핑
+    path('accounts/', include('accounts.urls')),
 ]
