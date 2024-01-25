@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -23,6 +24,9 @@ SECRET_KEY = "django-insecure-#o%3@%@&c#@f8h)4lo_55py5771w28f1v#l12g=oamm6%#(ed6
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
 
 ALLOWED_HOSTS = []
 
